@@ -10,6 +10,16 @@ if ($db-> connect_errno){
 }
 
 //CREATE POST
+?>
+<head><title>Edit Post</title></head>
+
+<form action= "edit_post.php" method= "POST">
+<input type= "text" name= "title" value= "Title your post"><br>
+<input type= "text" name= "author" value= "Who are you?"><br>
+<textarea name= "post" rows= "10" cols= "40">Write something!</textarea><br>
+<input type= "submit" name= "create" value= "Create"><br></form>
+
+<?php
 if (isset($_POST["create"])){
 	//create variables
 	$cr_title = $_POST['title'];
