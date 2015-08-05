@@ -17,7 +17,7 @@ if ($db-> connect_errno){
 <input type= "text" name= "title" value= "Title your post"><br>
 <input type= "text" name= "author" value= "Who are you?"><br>
 <textarea name= "post" rows= "10" cols= "40">Write something!</textarea><br>
-<input type= "submit" name= "create" value= "Create"><br></form>
+<input type= "submict" name= "create" value= "Create"><br></form>
 
 <?php
 if (isset($_POST["create"])){
@@ -38,6 +38,7 @@ if (isset($_POST["create"])){
 		$create->bind_param('sssss', $cr_title, $cr_author, $cr_date, $cr_modified, $cr_content);
 		//execute
 		$create->execute();
+		echo "I did it!";
 	}	
 }
 
@@ -53,6 +54,8 @@ if (isset($_POST["delete"])){
 	$delete->execute();
 
 }
+//CREATE TABLE within database:
+//create table posts( id INT NOT NULL AUTO_INCREMENT, title TEXT, author TEXT, date TEXT, modified TEXT, contents TEXT, PRIMARY KEY(id));
 
 
 ?>
