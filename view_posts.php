@@ -14,10 +14,10 @@ $view->bind_param('i', $_GET['id']);
 $view->execute();
 $view->bind_result($title, $author, $date, $modified, $contents);
 $view->fetch();
-
-echo $title . '<br>';
-echo  "By: $author <br>";
-echo "Posted On: $date <br>";
-echo "Last Modified On: $modified <br>";
-echo $contents . '<br>';
+echo "<p><h2><font face= 'georgia' > $title  </h3>";
+echo  "<b>By:</b> $author <br>";
+echo "<b>Posted On: </b> $date <br>";
+echo "<b>Last Modified On:</b> $modified <br>";
+echo "<b>Post:</b> $contents . <br></p>";
+echo "<a href= 'db_info.php'>Home</a><br>";
 ?>
